@@ -1,0 +1,110 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXRadioButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.ChoiceBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.text.Font?>
+
+<TabPane fx:id="tabPane" maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="340.0" prefWidth="500.0" style="-fx-background-color: transparent;" tabClosingPolicy="UNAVAILABLE" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.editarconsorciado.EditarConsorciadoController">
+  <tabs>
+    <Tab fx:id="tabPesq" text="Pesquisar">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="303.0" prefWidth="500.0" style="-fx-background-color: white;">
+               <children>
+                  <Pane prefHeight="60.0" prefWidth="500.0" style="-fx-background-color: #06373d;" />
+                  <TextField fx:id="textFieldPesquisa" layoutX="171.0" layoutY="13.0" prefHeight="30.0" prefWidth="300.0" promptText="Pesquisa" style="-fx-background-radius: 20px;">
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </TextField>
+                  <ChoiceBox fx:id="gestao_EditarConsorciado_choiceBox" layoutX="8.0" layoutY="15.0" prefWidth="130.0" style="-fx-background-radius: 20px; -fx-background-color: white;" />
+                  <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="436.0" layoutY="15.0" onMouseClicked="#listarConsorciados" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/search-13-24.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <TableView fx:id="tableViewConsorciadoPesquisado" layoutX="50.0" layoutY="96.0" prefHeight="200.0" prefWidth="400.0" style="-fx-border-color: transparent; -fx-background-radius: 10px;">
+                    <columns>
+                      <TableColumn fx:id="tableColumnDoc" prefWidth="107.0" text="CPF/CNPJ" />
+                      <TableColumn fx:id="tableColumnNome" prefWidth="292.0" text="Nome/Razão Social" />
+                    </columns>
+                  </TableView>
+                  <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="407.0" layoutY="62.0" onMouseClicked="#excluir" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/cancel_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+                  <ImageView fitHeight="30.0" fitWidth="50.0" layoutX="365.0" layoutY="62.0" onMouseClicked="#editar" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/compose_96px.png" />
+                     </image>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </ImageView>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+    <Tab fx:id="tabEdit" text="Editar">
+      <content>
+        <AnchorPane minHeight="0.0" minWidth="0.0" prefHeight="156.0" prefWidth="500.0" style="-fx-background-color: white;">
+               <children>
+                  <JFXTextField fx:id="textFieldNome" focusColor="#06373d" labelFloat="true" layoutX="12.0" layoutY="14.0" prefHeight="25.0" prefWidth="475.0" promptText="Nome/Razão Social" unFocusColor="#06373d">
+                     <font>
+                        <Font name="MyriadPro-Light" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <JFXTextField fx:id="textFieldDoc" editable="false" focusColor="#06373d" labelFloat="true" layoutX="13.0" layoutY="60.0" prefHeight="25.0" prefWidth="225.0" promptText="CPF/CNPJ" unFocusColor="#06373d">
+                     <font>
+                        <Font name="MyriadPro-Light" size="14.0" />
+                     </font>
+                  </JFXTextField>
+                  <ChoiceBox fx:id="checkBoxPA" layoutX="11.0" layoutY="118.0" prefHeight="27.0" prefWidth="238.0" style="-fx-background-radius: 20px; -fx-background-color: white; -fx-border-color: #ADD8E6; -fx-border-radius: 20PX;" />
+                  <JFXRadioButton fx:id="radioButtonStatus" layoutX="14.0" layoutY="156.0" text="Ativo" textFill="#06373d">
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </JFXRadioButton>
+                  <JFXButton layoutX="12.0" layoutY="191.0" onAction="#salvar" prefHeight="37.0" prefWidth="101.0" style="-fx-background-color: royalblue; -fx-background-radius: 10px;" text="Salvar" textFill="WHITE">
+                     <font>
+                        <Font name="MyriadPro-Light" size="16.0" />
+                     </font>
+                     <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/update.png" />
+                           </image>
+                        </ImageView>
+                     </graphic>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </JFXButton>
+                  <Label layoutX="15.0" layoutY="96.0" text="Ponto de Atendimento" textFill="#06373d">
+                     <font>
+                        <Font name="MyriadPro-Light" size="13.0" />
+                     </font>
+                  </Label>
+               </children></AnchorPane>
+      </content>
+    </Tab>
+  </tabs>
+</TabPane>

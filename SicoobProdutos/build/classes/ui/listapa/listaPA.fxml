@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="349.0" prefWidth="375.0" styleClass="anchorpane" stylesheets="@listapa.css" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.listapa.ListaPAController">
+   <children>
+      <TableView fx:id="tabelaPA" layoutX="13.0" layoutY="50.0" prefHeight="290.0" prefWidth="350.0" styleClass="table" AnchorPane.leftAnchor="13.0" AnchorPane.topAnchor="50.0">
+         <columns>
+            <TableColumn fx:id="colunaNumero" prefWidth="75.0" text="Número" />
+            <TableColumn fx:id="colunaNome" prefWidth="171.0" text="Nome" />
+            <TableColumn fx:id="colunaStatus" prefWidth="103.0" text="Status" />
+         </columns>
+      </TableView>
+      <Label layoutX="51.0" layoutY="13.0" prefHeight="36.0" prefWidth="280.0" text="Resultados da Busca - PA">
+         <font>
+            <Font name="MyriadPro-BoldCond" size="30.0" />
+         </font>
+      </Label>
+      <ImageView fitHeight="40.0" fitWidth="50.0" layoutX="11.0" layoutY="7.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../images/department_60px.png" />
+         </image>
+      </ImageView>
+   </children>
+</AnchorPane>

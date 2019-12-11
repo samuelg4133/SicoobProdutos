@@ -1,0 +1,8 @@
+git add .
+
+git commit -m "Comentário"
+
+// Caso não tenha vincúlo com o repositório, utilizar
+git remote add origin "URL do GIT"
+
+git push origin master

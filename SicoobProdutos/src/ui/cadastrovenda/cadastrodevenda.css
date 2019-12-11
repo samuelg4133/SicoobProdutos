@@ -1,0 +1,34 @@
+/*
+ * Empty Stylesheet file.
+ */
+
+
+.anchorpane{
+    -fx-background-color: transparent;   
+}
+
+.choicebox{
+    -fx-font-family: Myriad Pro Light;
+    -fx-text-fill: #06373d;
+    -fx-font-size: 12px;
+    -fx-background-color: transparent;
+    -fx-border-color:  #ADD8E6;
+}
+
+.choicebox2{
+    -fx-font-family: Myriad Pro Light;
+    -fx-text-fill: white;
+    -fx-font-size: 12px;
+    -fx-background-color: #ffffff;
+    -fx-border-color:  #ADD8E6;
+}
+.button{
+    -fx-background-color: #06373d;
+    -fx-font-family: Myriad Pro Light;
+    -fx-text-fill: white;
+    -fx-text-alignment: right;
+    -fx-cursor: hand;
+}
+.pane{
+    -fx-background-color: #06373d;
+}

@@ -1,0 +1,54 @@
+/*
+To change this license header, choose License Headers in Project Properties.
+To change this template file, choose Tools | Templates
+and open the template in the editor.
+*/
+/* 
+    Created on : 06/12/2019, 18:10:39
+    Author     : samuelg4133_00
+*/
+
+.pane{
+    -fx-background-color:  #06373d;
+}
+
+.anchorpane{
+    -fx-background-color: transparent;
+    -fx-animated: true;
+}
+
+.textfield{
+    -fx-text-fill: #06373d;
+    -fx-font-family: Myriad Pro Light;
+    -fx-font-size: 14px;
+}
+.buttoneditar{
+    -fx-text-fill: white;
+    -fx-font-family: Myriad Pro Light;
+    -fx-font-size: 14px;
+    -fx-background-color: #78866b;
+    -fx-cursor: hand;
+    -fx-background-radius: 200px;
+}
+.buttondeletar{
+    -fx-text-fill: white;
+    -fx-font-family: Myriad Pro Light;
+    -fx-font-size: 14px;
+    -fx-background-color: red;
+    -fx-cursor: hand;
+    -fx-background-radius: 200px;
+}
+.choicebox{
+    -fx-font-family: Myriad Pro Light;
+    -fx-text-fill: #06373d;
+    -fx-background-color: white;
+}
+
+.label{
+    -fx-text-fill: #06373d;
+}
+
+.table #title{
+    -fx-font-family: Myriad Pro Light;
+    -fx-text-fill: green;
+}

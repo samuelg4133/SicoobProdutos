@@ -1,0 +1,371 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import com.jfoenix.controls.JFXButton?>
+<?import com.jfoenix.controls.JFXTextField?>
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.Cursor?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.effect.Glow?>
+<?import javafx.scene.effect.Reflection?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.Pane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Circle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="520.0" prefWidth="1000.0" xmlns="http://javafx.com/javafx/8.0.171" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ui.main.PrincipalController">
+    <children>
+        <VBox prefHeight="520.0" prefWidth="250.0" style="-fx-background-color: #06373d;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+            <Pane prefHeight="100.0" prefWidth="250.0">
+               <children>
+                  <Label layoutX="14.0" layoutY="14.0" text="MyBusiness" textFill="WHITE">
+                     <font>
+                        <Font size="30.0" />
+                     </font></Label>
+                  <Label layoutX="34.0" layoutY="56.0" text="Acompanhamento de Consórcios" textFill="WHITE">
+                     <font>
+                        <Font name="MyriadPro-Light" size="14.0" />
+                     </font>
+                  </Label>
+                  <ImageView fitHeight="30.0" fitWidth="30.0" layoutX="183.0" layoutY="24.0" pickOnBounds="true" preserveRatio="true">
+                     <image>
+                        <Image url="@../images/money_60px.png" />
+                     </image>
+                  </ImageView>
+               </children>
+            </Pane>
+            <Pane prefHeight="50.0" prefWidth="269.0" style="-fx-background-color: Gainsboro; -fx-background-radius: 3;">
+               <VBox.margin>
+                  <Insets />
+               </VBox.margin>
+               <children>
+                  <Label layoutX="14.0" layoutY="13.0" text="Home Space" textFill="#06373e">
+                     <font>
+                        <Font name="MyriadPro-Light" size="20.0" />
+                     </font>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <effect>
+                        <Glow />
+                     </effect>
+                  </Label>
+               </children>
+            </Pane>
+                <JFXButton fx:id="buttonGestao" alignment="BASELINE_LEFT" graphicTextGap="25.0" onAction="#abrirPane" prefHeight="50.0" prefWidth="275.0" style="-fx-text-fill: white;" text="Gestão" VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/settings-5-24.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="MyriadPro-Light" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <VBox.margin>
+                        <Insets bottom="3.0" left="5.0" />
+                    </VBox.margin>
+                    <opaqueInsets>
+                        <Insets bottom="5.0" />
+                    </opaqueInsets>
+                </JFXButton>
+                <JFXButton fx:id="buttonDashboard" alignment="BASELINE_LEFT" graphicTextGap="25.0" onAction="#abrirPane" prefHeight="50.0" prefWidth="275.0" style="-fx-text-fill: white;" text="Dashboard" VBox.vgrow="ALWAYS">
+                    <graphic>
+                        <ImageView fitHeight="25.0" fitWidth="25.0" pickOnBounds="true" preserveRatio="true">
+                            <image>
+                                <Image url="@../images/dashboard-32.png" />
+                            </image>
+                        </ImageView>
+                    </graphic>
+                    <font>
+                        <Font name="MyriadPro-Light" size="18.0" />
+                    </font>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                    <VBox.margin>
+                        <Insets bottom="3.0" left="5.0" />
+                    </VBox.margin>
+                    <opaqueInsets>
+                        <Insets bottom="5.0" />
+                    </opaqueInsets>
+                </JFXButton>
+            </children>
+        </VBox>
+        <Pane fx:id="paneDashboard" layoutX="250.0" prefHeight="520.0" prefWidth="750.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+            <children>
+                <TableView fx:id="dash_tabela_FuncRankingQtd" layoutX="15.0" layoutY="110.0" prefHeight="180.0" prefWidth="300.0">
+                    <columns>
+                        <TableColumn fx:id="dash_colunaFunc_FuncRankingQtd" prefWidth="273.0" text="Funcionário" />
+                        <TableColumn fx:id="dash_colunaQtd_FuncRankingQtd" prefWidth="26.0" text="Qtd" />
+                    </columns>
+                </TableView>
+                <Label ellipsisString="50" layoutX="55.0" layoutY="20.0" lineSpacing="50.0" text="Top Vendedores (Quantidade)" textFill="#06373d" underline="true" wrapText="true">
+                    <font>
+                        <Font name="MyriadPro-Light" size="18.0" />
+                    </font>
+                </Label>
+                <Label ellipsisString="50" layoutX="405.0" layoutY="20.0" lineSpacing="50.0" text="Top Vendedores (Valor)" textFill="#06373d" underline="true" wrapText="true">
+                    <font>
+                        <Font name="MyriadPro-Light" size="18.0" />
+                    </font>
+                </Label>
+                <JFXTextField fx:id="dash_textFieldPesquisar_FuncRankingQtd" focusColor="LIME" labelFloat="true" layoutX="15.0" layoutY="65.0" prefHeight="35.0" prefWidth="300.0" promptText="Pesquisar" unFocusColor="#06373d">
+                    <font>
+                        <Font name="MyriadPro-Light" size="16.0" />
+                    </font>
+                </JFXTextField>
+                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="290.0" layoutY="70.0" onMouseClicked="#dash_Pesquisar_FuncRankingQtd" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/search-13-32.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+                <TableView fx:id="dash_tabela_FuncRankingValor" layoutX="340.0" layoutY="110.0" prefHeight="180.0" prefWidth="300.0">
+                    <columns>
+                        <TableColumn fx:id="dash_colunaFunc_FuncRankingValor" prefWidth="224.0" text="Funcionário" />
+                        <TableColumn fx:id="dash_colunaQtd_FuncRankingValor" prefWidth="75.0" text="Valor" />
+                    </columns>
+                </TableView>
+                <JFXTextField fx:id="dash_textFieldPesquisar_FuncRankingValorTotal" focusColor="LIME" labelFloat="true" layoutX="340.0" layoutY="65.0" prefHeight="35.0" prefWidth="300.0" promptText="Pesquisar" unFocusColor="#06373d">
+                    <font>
+                        <Font name="MyriadPro-Light" size="16.0" />
+                    </font>
+                </JFXTextField>
+                <ImageView fitHeight="25.0" fitWidth="25.0" layoutX="615.0" layoutY="70.0" onMouseClicked="#dash_Pesquisar_FuncRankingValorTotal" pickOnBounds="true" preserveRatio="true">
+                    <image>
+                        <Image url="@../images/search-13-32.png" />
+                    </image>
+                    <cursor>
+                        <Cursor fx:constant="HAND" />
+                    </cursor>
+                </ImageView>
+            <Label ellipsisString="50" layoutX="19.0" layoutY="297.0" lineSpacing="50.0" text="Produção por Ponto de Atendimento" textFill="#06373d" underline="true" wrapText="true">
+               <font>
+                  <Font name="MyriadPro-Light" size="18.0" />
+               </font>
+            </Label>
+            <TableView fx:id="dash_tabela_ProducaoPorPontoDeAtendimento" layoutX="15.0" layoutY="330.0" prefHeight="150.0" prefWidth="300.0">
+              <columns>
+                <TableColumn fx:id="dash_colunaUnidade_ProducaoPorPontoDeAtendimento" prefWidth="122.0" text="Unidade" />
+                <TableColumn fx:id="dash_colunaQuantidade_ProducaoPorPontoDeAtendimento" minWidth="7.0" prefWidth="71.0" text="Quantidade" />
+                  <TableColumn fx:id="dash_colunaTotal_ProducaoPorPontoDeAtendimento" prefWidth="106.0" text="Total" />
+              </columns>
+            </TableView>
+            </children>
+        </Pane>
+        <Pane fx:id="paneGestao" layoutX="250.0" prefHeight="520.0" prefWidth="750.0" style="-fx-background-color: white;" AnchorPane.bottomAnchor="0.0" AnchorPane.leftAnchor="250.0" AnchorPane.rightAnchor="0.0" AnchorPane.topAnchor="0.0">
+         <children>
+            <Pane layoutX="-14.0" layoutY="-162.0" prefHeight="297.0" prefWidth="454.0" rotate="40.0" style="-fx-background-radius: 70; -fx-background-color: #c8c8b4;" />
+            <Pane layoutX="125.0" layoutY="95.0" onMouseClicked="#abrirJanelaVendas" prefHeight="200.0" prefWidth="150.0">
+               <children>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: lightcyan; -fx-border-radius: 20;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Circle layoutX="75.0" layoutY="101.0" radius="40.0" stroke="WHITE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1e80fe" />
+                              <Stop color="SKYBLUE" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="0.8659003831417624" />
+                              <Stop color="LIGHTBLUE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="57.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../images/report_card_240px.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="58.0" layoutY="159.0" text="Vendas" textFill="#06373d">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane layoutX="125.0" layoutY="306.0" onMouseClicked="#abrirJanelaFuncionario" prefHeight="200.0" prefWidth="150.0">
+               <children>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: lightcyan; -fx-border-radius: 20;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Circle layoutX="75.0" layoutY="101.0" radius="40.0" stroke="WHITE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#1e80fe" />
+                              <Stop color="#20b0a6" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="0.8659003831417624" />
+                              <Stop color="#f4f4dc" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="57.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../images/management_60px.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="43.0" layoutY="157.0" text="Funcionários" textFill="#06373d">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+            <Pane fx:id="paneConsorciados" layoutX="352.0" layoutY="306.0" onMouseClicked="#mostrarOpcoes" prefHeight="200.0" prefWidth="150.0">
+               <children>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: lightcyan; -fx-border-radius: 20;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Circle layoutX="75.0" layoutY="101.0" radius="40.0" stroke="WHITE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="BLUE" />
+                              <Stop color="#91ed91" offset="0.007662835249042145" />
+                              <Stop color="WHITE" offset="0.9003831417624519" />
+                              <Stop color="WHITE" offset="0.900383141762452" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="57.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../images/user_account_60px.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="42.0" layoutY="158.0" text="Consorciados" textFill="#06373d">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </Label>
+                  <Pane fx:id="gestao_paneOpcoesConsorciados" layoutX="28.0" layoutY="5.0" prefHeight="50.0" prefWidth="95.0" style="-fx-border-color: lightcyan; -fx-background-color: white;">
+                     <children>
+                        <ImageView fx:id="gestao_imageAdd" fitHeight="30.0" fitWidth="30.0" layoutX="10.0" layoutY="10.0" onMouseClicked="#abrirJanelaConsorciados" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/add_user_male_30px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                        <ImageView fx:id="gestao_imageEditar" fitHeight="30.0" fitWidth="30.0" layoutX="50.0" layoutY="10.0" onMouseClicked="#abrirJanelaEditarConsorciados" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../images/registration_30px.png" />
+                           </image>
+                           <cursor>
+                              <Cursor fx:constant="HAND" />
+                           </cursor>
+                        </ImageView>
+                     </children>
+                  </Pane>
+               </children>
+            </Pane>
+            <Pane layoutX="352.0" layoutY="95.0" onMouseClicked="#abrirJanelaListaPA" prefHeight="200.0" prefWidth="150.0">
+               <children>
+                  <Button alignment="BOTTOM_LEFT" contentDisplay="CENTER" layoutY="-2.0" mnemonicParsing="false" prefHeight="200.0" prefWidth="150.0" style="-fx-background-color: transparent; -fx-background-radius: 20; -fx-border-color: lightcyan; -fx-border-radius: 20;">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Button>
+                  <Circle layoutX="75.0" layoutY="101.0" radius="40.0" stroke="WHITE" strokeType="INSIDE">
+                     <fill>
+                        <LinearGradient endX="1.0" endY="1.0">
+                           <stops>
+                              <Stop color="#51cf1f" />
+                              <Stop color="#51cf1f" offset="0.007662835249042145" />
+                              <Stop color="#cccc00" offset="0.0344827586206896" />
+                              <Stop color="WHITE" offset="0.911877394636015" />
+                              <Stop color="WHITE" offset="1.0" />
+                           </stops>
+                        </LinearGradient>
+                     </fill>
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                  </Circle>
+                  <ImageView fitHeight="35.0" fitWidth="35.0" layoutX="58.0" layoutY="83.0" pickOnBounds="true" preserveRatio="true">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <image>
+                        <Image url="@../images/bank.png" />
+                     </image>
+                     <effect>
+                        <Reflection />
+                     </effect>
+                  </ImageView>
+                  <Label layoutX="14.0" layoutY="155.0" text="Pontos de Atendimento" textFill="#06373d">
+                     <cursor>
+                        <Cursor fx:constant="HAND" />
+                     </cursor>
+                     <font>
+                        <Font name="MyriadPro-BoldCond" size="14.0" />
+                     </font>
+                  </Label>
+               </children>
+            </Pane>
+         </children>
+      </Pane>
+    </children>
+</AnchorPane>
